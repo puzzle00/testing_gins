@@ -112,7 +112,7 @@ def stuff(files, pname): # THIS WHOLE FUNCTION IS SYSTEM
 
 def edit_config(files, pname):
     """Edits the .pth files"""
-    spac=site.getsitepackages()[0]
+    spac=site.getusersitepackages()
     pathpath=os.path.join(spac,"ginspaths.pth")
     ginspath=os.path.abspath("~/.gins/")
     pacpath=os.path.join(ginspath,pname)
