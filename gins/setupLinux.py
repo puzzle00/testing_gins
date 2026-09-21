@@ -73,12 +73,12 @@ def fix_dependencies(deps):
         names=[]
         for i in deps:
             prefixes.append(i.split(":")[0])
-            packages.append(i.split(":")[1])
+            names.append(i.split(":")[1])
         for i in range(len(deps)):
             if prefixes[i]=="pip":
-                pipin(packages[i])
+                pipin(names[i])
             else:
-                ginstall(packages[i])
+                ginstall(names[i])
     except Exception as e:
         cons.log(f"Error while checking and installing dependencies: {e}", style="danger")
         sys.exit(1)
