@@ -115,10 +115,9 @@ def edit_config(files, pname):
     spac=site.getusersitepackages()
     pathpath=os.path.join(spac,"ginspaths.pth")
     ginspath=os.path.abspath(Path.home()/".gins/")
-    pacpath=os.path.join(ginspath,pname)
     mode='a' if os.path.exists(pathpath) else 'w'
     with open(pathpath, mode, encoding="utf-8") as f:
-        f.write(pacpath+"\n")
+        f.write(ginspath+"\n")
     
 def main():
     """Run all the functions in order using the gpth"""
