@@ -131,7 +131,7 @@ def main():
                 fix_dependencies(parsed["gins"]["dependencies"])
                 stuff(parsed["gins"]["filenames"],parsed['gins']['projectname'])
                 edit_config(parsed["gins"]["filenames"],parsed['gins']['projectname'])
-                cons.log(f"Succesfully installed {parsed['gins']['projectname']", style="success")
+                cons.log(f"Succesfully installed {parsed['gins']['projectname']}", style="success")
                 sys.exit()
             else:
                 pass
