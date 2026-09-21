@@ -1,4 +1,5 @@
 [gins]
+projectname="PracticingGins"
 filenames=[
 "__init__.py",
 "thingies.py",
