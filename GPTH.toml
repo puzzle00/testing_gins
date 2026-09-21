@@ -1,0 +1,9 @@
+[gins]
+filenames=[
+"__init__.py",
+"thingies.py",
+"thisfileneedsnum.py"
+]
+dependencies=[
+"pip:numpy"
+]
