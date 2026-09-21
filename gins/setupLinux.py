@@ -51,7 +51,7 @@ def pipin(package):
     """ Install a package from Pip """
     cons.log(f"Installing {package} from Pip...", style="info")
     try:
-        exit_code=subprocess.run([sys.executable, "-m", "pip", 'install', package, "--break-system-packages"]) # SYSTEM
+        exit_code=subprocess.run([sys.executable, "-m", "pip", 'install', package, "--break-system-packages"]).returncode # SYSTEM
         if exit_code!=0:
             cons.log(f"Error while Pip installing {package}", style="danger")
             sys.exit(1)
