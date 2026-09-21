@@ -114,7 +114,7 @@ def edit_config(files, pname):
     """Edits the .pth files"""
     spac=site.getusersitepackages()
     pathpath=os.path.join(spac,"ginspaths.pth")
-    ginspath=os.path.abspath(Path.home(),".gins/")
+    ginspath=os.path.abspath(Path.home()/".gins/")
     pacpath=os.path.join(ginspath,pname)
     mode='a' if os.path.exists(pathpath) else 'w'
     with open(pathpath, mode, encoding="utf-8") as f:
