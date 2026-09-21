@@ -9,7 +9,7 @@ try:
 except ImportError:
     print("Rich package not found. Installing it now...")
     subprocess.run([sys.executable, "-m", "pip", "install", "rich", "--break-system-packages"]) # SYSTEM
-    from rich.console impoort Console
+    from rich.console import Console
     from rich.theme import Theme
 
 """ ALL PACKAGES SHOULD GIVE GUI OUTPUT VIA A GLOBAL CONSOLE OBJECT!!! """
