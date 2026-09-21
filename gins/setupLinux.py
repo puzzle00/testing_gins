@@ -98,7 +98,7 @@ def stuff(files, pname): # THIS WHOLE FUNCTION IS SYSTEM
     """Stuffs the package"""
     cons.log("Installing package...", style="info")
     try:
-        inst_path=Path(f"~/.gins/{pname}")
+        inst_path=Path.home()/f".gins/{pname}"
         inst_path.mkdir(parents=True, exist_ok=True)
         if do_we_have_it(pname):
             if Confirm.ask(f"{pname} already exists. Reinstall?" , console=cons):
@@ -114,7 +114,7 @@ def edit_config(files, pname):
     """Edits the .pth files"""
     spac=site.getusersitepackages()
     pathpath=os.path.join(spac,"ginspaths.pth")
-    ginspath=os.path.abspath("~/.gins/")
+    ginspath=os.path.abspath(Path.home(),".gins/")
     pacpath=os.path.join(ginspath,pname)
     mode='a' if os.path.exists(pathpath) else 'w'
     with open(pathpath, mode, encoding="utf-8") as f:
