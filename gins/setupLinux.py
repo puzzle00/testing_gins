@@ -87,7 +87,7 @@ def fix_dependencies(deps):
 
 def do_we_have_it(package):
     """ Do we have it? """
-    package = package.lower.replace("-","_")
+    package = package.lower().replace("-","_")
     try:
         __import__(package)
     except ImportError:
